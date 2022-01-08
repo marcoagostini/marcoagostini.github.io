@@ -1,0 +1,20 @@
+body {
+    background-color: black;;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 40%;
+
+    color: white;
+    font-size: 5em;
+}
+
+h2 {
+    text-align: center;
+    color: white;
+    margin: auto;
+  }
+    
+    
