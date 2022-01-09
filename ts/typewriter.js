@@ -34,18 +34,23 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
 };
-function typeWritter(element, stringToPrint, printDelay) {
+function sleep(ms) {
+    return new Promise(function (resolve) { return setTimeout(resolve, ms); });
+}
+function typeWriter(element, stringToPrint, delay) {
     return __awaiter(this, void 0, void 0, function () {
         var i;
         return __generator(this, function (_a) {
             switch (_a.label) {
                 case 0:
+                    if (stringToPrint.length === 0)
+                        return [2 /*return*/];
                     i = 0;
                     _a.label = 1;
                 case 1:
                     if (!(i <= stringToPrint.length)) return [3 /*break*/, 4];
-                    element.innerHTML = stringToPrint.slice(0, i);
-                    return [4 /*yield*/, delay(printDelay)];
+                    element.innerText = stringToPrint.slice(0, i);
+                    return [4 /*yield*/, sleep(delay)];
                 case 2:
                     _a.sent();
                     _a.label = 3;
@@ -57,12 +62,5 @@ function typeWritter(element, stringToPrint, printDelay) {
         });
     });
 }
-function delay(ms) {
-    return __awaiter(this, void 0, void 0, function () {
-        return __generator(this, function (_a) {
-            return [2 /*return*/, new Promise(function (resolve) { return setTimeout(resolve, ms); })];
-        });
-    });
-}
-typeWritter(document.querySelector("#name"), "Marco Agostini", 150);
-typeWritter(document.querySelector("#title"), "Computer Science Student", 100);
+typeWriter(document.querySelector("#name"), "Marco Agostini", 150);
+typeWriter(document.querySelector("#title"), "Computer Science Student", 100);
