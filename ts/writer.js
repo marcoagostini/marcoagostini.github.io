@@ -34,20 +34,18 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
 };
-function Main() {
+function typeWritter(element, stringToPrint, printDelay) {
     return __awaiter(this, void 0, void 0, function () {
-        var author, name, i;
+        var i;
         return __generator(this, function (_a) {
             switch (_a.label) {
                 case 0:
-                    author = "Marco Agostini";
-                    name = document.querySelector("#name");
                     i = 0;
                     _a.label = 1;
                 case 1:
-                    if (!(i <= author.length)) return [3 /*break*/, 4];
-                    name.innerHTML = author.slice(0, i);
-                    return [4 /*yield*/, delay(150)];
+                    if (!(i <= stringToPrint.length)) return [3 /*break*/, 4];
+                    element.innerHTML = stringToPrint.slice(0, i);
+                    return [4 /*yield*/, delay(printDelay)];
                 case 2:
                     _a.sent();
                     _a.label = 3;
@@ -66,4 +64,5 @@ function delay(ms) {
         });
     });
 }
-Main();
+typeWritter(document.querySelector("#name"), "Marco Agostini", 150);
+typeWritter(document.querySelector("#title"), "Computer Science Student", 100);
