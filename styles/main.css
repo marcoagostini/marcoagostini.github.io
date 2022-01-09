@@ -17,9 +17,16 @@ h2 {
     margin: auto;
 }
 
+footer {
+    margin-top: auto;
+    position: fixed;
+    bottom: 10px;
+}
+
 .navbar {
     display: flex;
     justify-content: center;
+
     width: 50%;
 }
 
