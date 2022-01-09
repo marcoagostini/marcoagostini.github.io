@@ -34,5 +34,13 @@ footer {
     color: white;
     margin-right: 1rem;
 }
+a {
+    text-decoration: none;
+    padding: 5px
+}
 
+a:hover {
+    background-color: white;
+    color: black;
+}
 
